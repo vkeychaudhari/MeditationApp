@@ -17,7 +17,8 @@ A modern cross-platform Meditation App built with .NET MAUI, designed to help us
 > Inspired by Figma:  
 > [Meditation App UI - Community Design](https://www.figma.com/design/hOmNiYule546rmFSJqMX6h/Meditation-app-UI--Community-?node-id=0-1&p=f&t=qBsc7LH8Me5UQRCc-0)
 
-*(Include screenshots here once available)*
+![image](https://github.com/user-attachments/assets/06f7a5c3-7248-4c66-8eb1-166e7552515d)
+
 
 ## 🚀 Tech Stack
 
