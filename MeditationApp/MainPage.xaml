@@ -4,7 +4,7 @@
              xmlns:svg="clr-namespace:FFImageLoading.Svg.Maui;assembly=FFImageLoading.Compat.Svg.Maui"
              x:Class="MeditationApp.MainPage">
 
-    <Grid RowDefinitions="auto,auto,auto,auto">
+    <Grid RowDefinitions="auto,0.*,auto,auto">
         <HorizontalStackLayout HorizontalOptions="Center"
                        Margin="0,20" ZIndex="9999">
             <Label Text="Silent" FontSize="16" FontFamily="AirbnbCereal_W_Bd" TextColor="#3F414E"/>
@@ -31,7 +31,7 @@
         </VerticalStackLayout>
 
         <VerticalStackLayout  Grid.Row="3" HorizontalOptions="Center"
-                      WidthRequest="298" Spacing="15" Margin="0,25">
+                      Spacing="15" Margin="0,25">
             <!-- Sign Up Button -->
             <Button
         Text="SIGN UP"
@@ -39,7 +39,7 @@
         TextColor="White" FontSize="16"
         CornerRadius="30" FontFamily="HelveticaNeue"
         FontAttributes="Bold"
-        WidthRequest="300"
+        WidthRequest="374"
         HeightRequest="65"
         HorizontalOptions="Center" />
 
