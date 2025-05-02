@@ -4,7 +4,7 @@
              xmlns:svg="clr-namespace:FFImageLoading.Svg.Maui;assembly=FFImageLoading.Compat.Svg.Maui"
              x:Class="MeditationApp.MainPage">
 
-    <Grid RowDefinitions="auto,auto,auto">
+    <Grid RowDefinitions="auto,auto,auto,auto">
         <HorizontalStackLayout HorizontalOptions="Center"
                        Margin="0,20" ZIndex="9999">
             <Label Text="Silent" FontSize="16" FontFamily="AirbnbCereal_W_Bd" TextColor="#3F414E"/>
@@ -21,10 +21,45 @@
               Stroke="#FAF8F5" VerticalOptions="End"/>
 
         <VerticalStackLayout  Grid.Row="2" HorizontalOptions="Center"
-                              WidthRequest="298">
-            <Label Text="We are what we do" FontSize="16" FontFamily="AirbnbCereal_W_Bd" TextColor="#3F414E"/>
+                              WidthRequest="298" Spacing="15">
+            <Label Text="We are what we do" FontSize="30" FontFamily="AirbnbCereal_W_Bd" TextColor="#3F414E"/>
             <Label Text="Thousand of people are usign silent moon for smalls meditation" FontSize="16" 
-                   FontFamily="AirbnbCereal_W_Bd" TextColor="#3F414E"/>
+                   FontFamily="HelveticaNeue" TextColor="#A1A4B2" HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   LineBreakMode="WordWrap"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout  Grid.Row="3" HorizontalOptions="Center"
+                      WidthRequest="298" Spacing="15" Margin="0,25">
+            <!-- Sign Up Button -->
+            <Button
+        Text="SIGN UP"
+        BackgroundColor="#8E97FD"
+        TextColor="White" FontSize="16"
+        CornerRadius="30" FontFamily="HelveticaNeue"
+        FontAttributes="Bold"
+        WidthRequest="300"
+        HeightRequest="65"
+        HorizontalOptions="Center" />
+
+            <!-- Log In Text -->
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label
+            Text="ALREADY HAVE AN ACCOUNT? "
+            TextColor="Gray"
+            FontSize="14" FontFamily="HelveticaNeue"/>
+                <Label
+            Text="LOG IN"
+            TextColor="#8E97FD"
+            FontSize="14"
+            FontAttributes="Bold" FontFamily="HelveticaNeue">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                    Command="{Binding LoginCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
         </VerticalStackLayout>
     </Grid>
 
