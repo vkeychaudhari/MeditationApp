@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:svg="clr-namespace:FFImageLoading.Svg.Maui;assembly=FFImageLoading.Compat.Svg.Maui"
+             x:Class="MeditationApp.MainPage">
+
+    <Grid RowDefinitions="auto,auto,auto">
+        <HorizontalStackLayout HorizontalOptions="Center"
+                       Margin="0,20" ZIndex="9999">
+            <Label Text="Silent" FontSize="16" FontFamily="AirbnbCereal_W_Bd" TextColor="#3F414E"/>
+            <Image Source="logo.png" VerticalOptions="Start" Margin="10,0"
+                   HeightRequest="25" WidthRequest="25"/>
+            <Label Text="Moon" FontSize="16" FontFamily="AirbnbCereal_W_Bd" TextColor="#3F414E"/>
+        </HorizontalStackLayout>
+        <Path Data="M0.5 -1V381.053C0.5 381.053 32.7351 449.788 115.612 441.811C198.489 433.835 215.677 390.876 315.743 470.049C315.743 470.049 351.043 503.185 415.5 501.967V-1H0.5Z"
+              Fill="#FAF8F5"/>
+        
+        <Image Source="firstimage.png" Grid.Row="0"
+       VerticalOptions="Center" HorizontalOptions="Center" Margin="10,0,10,0"/>
+        <Path Grid.Row="1" Data="M402.649 71C349.855 71 318.572 46.6618 318.238 46.3815C255.685 -2.76224 217.338 6.60991 164.278 19.6001C150.205 23.0445 135.638 26.6092 119.029 29.5997C37.8493 44.232 -2.09944 1.67016 -2.5 1.22959L-1.51196 0.335083C-1.12476 0.762303 38.3967 42.7768 118.775 28.2913C135.358 25.3008 149.885 21.7495 163.944 18.3051C217.378 5.2348 255.978 -4.2041 319.053 45.3401C319.44 45.6472 357.399 75.152 420.353 68.7571L420.487 70.0788C414.305 70.7197 408.35 71 402.649 71Z"
+              Stroke="#FAF8F5" VerticalOptions="End"/>
+
+        <VerticalStackLayout  Grid.Row="2" HorizontalOptions="Center"
+                              WidthRequest="298">
+            <Label Text="We are what we do" FontSize="16" FontFamily="AirbnbCereal_W_Bd" TextColor="#3F414E"/>
+            <Label Text="Thousand of people are usign silent moon for smalls meditation" FontSize="16" 
+                   FontFamily="AirbnbCereal_W_Bd" TextColor="#3F414E"/>
+        </VerticalStackLayout>
+    </Grid>
+
+    <!--<svg:SvgCachedImage Source="logo.svg" HeightRequest="25" WidthRequest="25" DownsampleToViewSize="True"
+      HorizontalOptions="FillAndExpand" ErrorPlaceholder="dotnet_bot.png" LoadingPlaceholder="dotnet_bot.png">
+ </svg:SvgCachedImage>-->
+
+</ContentPage>
