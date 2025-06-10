@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeditationApp.Views.SignInPage"
+             xmlns:vm="clr-namespace:MeditationApp.ViewModels"
+             Title="SignInPage" Shell.PresentationMode="ModalAnimated">
+    <ContentPage.BindingContext>
+        <vm:SignInViewModel/>
+    </ContentPage.BindingContext>
+    <VerticalStackLayout Padding="30,50" Spacing="25">
+        <Label Text="Welcome Back!" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+        <!-- Add Social Buttons -->
+        <Button Text="CONTINUE WITH FACEBOOK" BackgroundColor="#7583CA" TextColor="White" CornerRadius="25" HeightRequest="55"/>
+        <Button Text="CONTINUE WITH GOOGLE" BorderColor="{StaticResource Gray300}" BorderWidth="1" BackgroundColor="White" TextColor="{StaticResource Gray900}" CornerRadius="25" HeightRequest="55"/>
+
+        <Label Text="OR LOG IN WITH EMAIL" HorizontalOptions="Center" TextColor="{StaticResource Gray400}" FontSize="14" Margin="0,20"/>
+
+        <!-- Email and Password Fields -->
+        <Entry Placeholder="Email address" Keyboard="Email"/>
+        <Entry Placeholder="Password" IsPassword="True"/>
+
+        <Button Text="LOG IN"
+                Command="{Binding LoginCommand}"
+                BackgroundColor="#8E97FD"
+                TextColor="White"
+                HeightRequest="55"
+                CornerRadius="25"/>
+
+        <Label Text="Forgot Password?" HorizontalOptions="Center" FontAttributes="Bold"/>
+
+    </VerticalStackLayout>
+</ContentPage>

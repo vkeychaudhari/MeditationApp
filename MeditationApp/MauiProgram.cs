@@ -1,5 +1,7 @@
 ﻿using CommunityToolkit.Maui;
 using FFImageLoading.Maui;
+using MeditationApp.ViewModels;
+using MeditationApp.Views;
 using Microsoft.Extensions.Logging;
 
 namespace MeditationApp
@@ -29,6 +31,22 @@ namespace MeditationApp
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
+
+            // Register Views (Pages)
+            builder.Services.AddSingleton<GetStartedPage>();
+            builder.Services.AddTransient<SignInPage>();
+            builder.Services.AddTransient<SignUpPage>();
+            builder.Services.AddTransient<WelcomePage>();
+            builder.Services.AddTransient<ChooseTopicPage>();
+
+
+            // Register ViewModels
+            builder.Services.AddSingleton<GetStartedViewModel>();
+            builder.Services.AddTransient<SignInViewModel>();
+            builder.Services.AddTransient<SignUpViewModel>();
+            builder.Services.AddTransient<WelcomeViewModel>();
+            builder.Services.AddTransient<ChooseTopicViewModel>();
+
 
             return builder.Build();
         }

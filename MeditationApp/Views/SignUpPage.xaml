@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeditationApp.Views.SignUpPage"
+             xmlns:vm="clr-namespace:MeditationApp.ViewModels"
+             Title="SignUpPage" Shell.PresentationMode="ModalAnimated">
+    <ContentPage.BindingContext>
+        <vm:SignUpViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <VerticalStackLayout Padding="30,20" Spacing="20">
+            <!-- Social Buttons -->
+            <Button Text="CONTINUE WITH FACEBOOK" BackgroundColor="#7583CA" TextColor="White" CornerRadius="25" HeightRequest="55"/>
+            <Button Text="CONTINUE WITH GOOGLE" BorderColor="{StaticResource Gray300}" BorderWidth="1" BackgroundColor="White" TextColor="{StaticResource Gray900}" CornerRadius="25" HeightRequest="55"/>
+
+            <Label Text="OR SIGN UP WITH EMAIL" HorizontalOptions="Center" TextColor="{StaticResource Gray400}" FontSize="14" Margin="0,15"/>
+
+            <!-- Form Fields -->
+            <Entry Placeholder="Username"/>
+            <Entry Placeholder="Email address" Keyboard="Email"/>
+            <Entry Placeholder="Password" IsPassword="True"/>
+
+            <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                <CheckBox/>
+                <Label Text="I have read the Privacy Policy" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+
+            <Button Text="GET STARTED"
+                    Command="{Binding GetStartedCommand}"
+                    BackgroundColor="#8E97FD"
+                    TextColor="White"
+                    HeightRequest="55"
+                    CornerRadius="25"/>
+
+            <HorizontalStackLayout HorizontalOptions="Center" Margin="0, 20">
+                <Label Text="ALREADY HAVE AN ACCOUNT? " VerticalOptions="Center" TextColor="{StaticResource Gray500}"/>
+                <Label Text="LOG IN" FontAttributes="Bold" TextColor="#8E97FD" VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToSignInCommand}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
