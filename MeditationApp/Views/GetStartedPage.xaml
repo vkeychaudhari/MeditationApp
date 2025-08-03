@@ -9,7 +9,7 @@
         <vm:GetStartedViewModel />
     </ContentPage.BindingContext>
 
-    <Grid RowDefinitions="auto,0.*,auto,auto">
+    <Grid RowDefinitions="auto,0.*,auto,auto" BackgroundColor="White">
         <HorizontalStackLayout HorizontalOptions="Center"
                    Margin="0,20" ZIndex="9999">
             <Label Text="Silent" FontSize="16" FontFamily="AirbnbCereal_W_Bd" TextColor="#3F414E"/>
@@ -35,8 +35,8 @@
                LineBreakMode="WordWrap"/>
         </VerticalStackLayout>
 
-        <VerticalStackLayout  Grid.Row="3" HorizontalOptions="Center"
-                  Spacing="15" Margin="0,25">
+        <VerticalStackLayout  Grid.Row="3" HorizontalOptions="Fill"
+                  Spacing="15" Margin="15,25" BackgroundColor="Transparent">
             <!-- Sign Up Button -->
             <Button
     Text="SIGN UP"
@@ -44,9 +44,8 @@
     TextColor="White" FontSize="16"
     CornerRadius="30" FontFamily="HelveticaNeue"
     FontAttributes="Bold"
-    WidthRequest="374"
     HeightRequest="65"
-    HorizontalOptions="Center" Command="{Binding GoToSignUpCommand}"/>
+    HorizontalOptions="Fill" Command="{Binding GoToSignUpCommand}"/>
 
             <!-- Log In Text -->
             <HorizontalStackLayout HorizontalOptions="Center">

@@ -29,8 +29,19 @@ namespace MeditationApp.ViewModels
 
         private async Task GoToSignIn()
         {
-            // Navigate from sign up to sign in. ".." means go up one level.
-            await Shell.Current.GoToAsync($"../{nameof(SignInPage)}");
+            try
+            {
+                // Navigate from sign up to sign in. ".." means go up one level.
+                //await Shell.Current.GoToAsync($"../{nameof(SignInPage)}");
+
+                await Shell.Current.GoToAsync($"///{nameof(SignInPage)}");
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that may occur during navigation
+                Console.WriteLine($"Navigation error: {ex.Message}");
+
+            }
         }
     }
 }
